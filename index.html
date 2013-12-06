@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html ng-app="tagSearch">
+  <head>
+    <title>Tech Trendz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
+        <!-- project dependency libs - Bootstrap -->	
+	<link href="css/bootstrap.css" rel="stylesheet" media="screen"/>
+	<link href="css/bootstrap-theme.css" rel="stylesheet" media="screen"/>
+	<link href="css/select2.css" rel="stylesheet" media="screen"/>
+	<link href="css/customize.css" rel="stylesheet" media="screen"/>
+	<link href="css/bootstrap-select.css" rel="stylesheet" media="screen"/>
+	<link rel="stylesheet" href="css/font-awesome.css" media="screen" >
+
+</head>
+<body ng-controller="SearchCtrl">
+	<div class='container topHeader'>
+		<div class='col-md-12'>
+			<input type="text" id="mainSearch" class='searchBox' placeholder="Search for stack tags...." >
+			<button ng-click = "search()" class='btn btn-custom'><i class="fa fa-search"></i></button>
+		</div>
+	</div>
+	<div class='container dashboardContainer'>
+		<h2 class='dashboardHeader'>StackOverflow Tech Trends</h2>
+		<div class='row rowMargin'>
+			<div class='col-md-8 col-sm-12 mainGraph' style='padding:10px; background-color:rgba(51, 51, 51, 0.4);'>
+				<div class='trendGraphContainer'>
+					<p><i class="fa fa-bar-chart-o"></i>&nbsp;&nbsp;Trend Analysis</p>
+					 <div id="placeholder">
+				  
+					</div>
+
+				</div><!--End of trendGraphContainer-->
+			</div><!--col-md-8-->
+				<div class='userTab col-md-4 col-sm-12'>
+				<section class="widget widget-tabs">
+                    <header>
+                        <ul class="nav nav-tabs">
+                            <li  class="active">
+                                <a data-toggle="tab" href="#answerStats">Answers</a>
+                            </li>
+							<li>
+                                <a data-toggle="tab" href="#questionStats">Questions</a>
+                            </li>
+							<li>
+                                <a data-toggle="tab" href="#relatedTags">Related Tags</a>
+                            </li>
+                        </ul>
+                    </header>
+                    <div class="body tab-content">
+                        <div class="tab-pane active clearfix" id="answerStats">
+                            <h5 class="tab-header"><i class="fa fa-group"></i> Popular Users</h5>
+                            <ul class="news-list news-list1">
+                               
+                            </ul>
+                        </div>
+						<div class="tab-pane clearfix" id="questionStats">
+                            <h5 class="tab-header"><i class="fa fa-group"></i> Popular Users</h5>
+                            <ul class="news-list news-list0">
+                               
+                            </ul>
+                        </div>
+						<div class="tab-pane clearfix" id="relatedTags">
+                            <h5 class="tab-header"><i class="fa fa-tags"></i> Related Tags</h5>
+                            <ul class="news-list tags">
+                               
+                            </ul>
+                        </div>
+                     </div>
+                </section>
+			</div>
+	
+		</div><!--row-->
+		
+		<div class='row rowMargin'>
+			<div class='col-md-12 mapContainer'>
+			<p>Compare With</p>
+			<input type="text" id="compareSelection" class='searchBox' placeholder="Compare With Stack Tags...." >
+			
+			<select class='selectChange pull-right'>
+				<option value="questions">Compare Questions</option>
+				<option value="answers">Compare Answers</option>
+			</select>
+			
+			<div class='compareGraphContainer'>
+					<p><i class="fa fa-bar-chart-o"></i>&nbsp;&nbsp;Trend Comparison</p>
+					
+					 <div id="comparePlaceholder" class='sts'>
+				  
+					</div>
+
+				</div><!--End of trendGraphContainer-->
+			</div>
+		</div><!-- row -->
+		
+		<div class='row rowMargin'>
+			<div class='col-md-12 tabContainer'>
+				<section class="widget widget-tabs">
+                    <header>
+                        <ul class="nav nav-tabs">
+                            <li  class="active">
+                                <a data-toggle="tab" href="#answer">Top Voted Answers</a>
+                            </li>
+							<li>
+                                <a data-toggle="tab" href="#question">Top Voted Questions</a>
+                            </li>
+                        </ul>
+                    </header>
+                    <div class="body tab-content">
+                        <div class="tab-pane active clearfix" id="answer">
+                            <h5 class="tab-header"><i class="fa fa-bookmark"></i>  Most Up Voted Answers</h5>
+                             <ul class="upvoteList upvoteList1">
+							 </ul>
+                        </div>
+						<div class="tab-pane clearfix" id="question">
+                            <h5 class="tab-header"><i class="fa fa-bookmark"></i>  Most Up Voted Questions</h5>
+                             <ul class="upvoteList upvoteList0">
+							 </ul>
+                        </div>
+                     </div>
+                </section>
+			</div>
+		</div>
+	</div><!-- End of dashboardContainer-->
+	
+	<script src="js/jquery.js"></script>
+	<script src="js/jqueryTemplate.js"></script>
+	<script src="js/select2.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-ui-select2.js"></script>
+	<!--<script src="js/ui-bootstrap-0.6.0.js"></script>-->
+    <script src="js/elastic.js"></script>
+    <script src="js/elastic-angular-client.js"></script>
+	<script src="js/angular-ui.js"></script>
+	<script src='js/bootstrap.js'></script>
+	<script src='js/bootstrap-select.js'></script>
+	<script src='js/config.js'></script>
+
+	<script src="http://techslides.com/demos/d3/js/d3.min.js"></script>
+	<script src="js/jquery.flot.js"></script>
+	<script src="js/jquery.flot.stack.js"></script>
+	<script src="js/jquery.flot.time.js"></script>
+	<script src="js/jquery.flot.crosshair.js"></script>
+	<script src="http://techslides.com/demos/d3/js/topojson.v1.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/controllers.js"></script>
+	<script src='js/drawMap.js'></script>
+	
+	<script id="userTemplate0" type="text/x-jquery-tmpl">  
+         <li>
+            <a href="http://www.stackoverflow.com${_source.user_timeline_url}" target='_blank'>
+				<img class="pull-left img-circle" alt="" src="http://www.gravatar.com/avatar/${_source.email_hash}.jpg?s=40">
+				<div class="news-item-info">
+				<div class="name">${_source.display_name}</div>
+				<div class="position"><i class="fa fa-certificate"></i>&nbsp;Reputation - ${_source.reputation}</div>
+				</div>
+			</a>
+        </li>
+	</script>  
+	
+	<script id="userTemplate1" type="text/x-jquery-tmpl">  
+         <li>
+            <a href="http://www.stackoverflow.com${_source.user_timeline_url}" target='_blank'>
+				<img class="pull-left img-circle" alt="" src="http://www.gravatar.com/avatar/${_source.email_hash}.jpg?s=40">
+				<div class="news-item-info">
+				<div class="name">${_source.display_name}</div>
+				<div class="position"><i class="fa fa-certificate"></i>&nbsp;Reputation - ${_source.reputation}</div>
+				</div>
+			</a>
+        </li>
+	</script>  
+	
+	<script id="upvoteTemplate0" type="text/x-jquery-tmpl">  
+         <li>
+            <a href="http://www.stackoverflow.com${_source.question_timeline_url}" target='_blank'>
+				<img class="pull-left img-circle" alt="" src="css/img/stack.png">
+				<div class="news-item-info">
+				<div class="name">${_source.title}</div>
+				<div class="position"><i class="fa fa-certificate"></i>&nbsp;Up Vote - <b>${_source.up_vote_count}</b></div>
+				</div>
+			</a>
+        </li>
+	</script>  
+	
+	<script id="upvoteTemplate1" type="text/x-jquery-tmpl">  
+         <li>
+            <a href="http://www.stackoverflow.com/questions/${_id}/timeline" target='_blank'>
+				<img class="pull-left img-circle" alt="" src="css/img/stack.png">
+				<div class="news-item-info">
+				<div class="name">${_source.title}</div>
+				<div class="position"><i class="fa fa-certificate"></i>&nbsp;Up Vote - <b>${_source.up_vote_count}</b></div>
+				</div>
+			</a>
+        </li>
+	</script>  
+	
+		<script id="relatedTagTemplate" type="text/x-jquery-tmpl">  
+         <li>
+			<img class="pull-left img-circle" alt="" src="css/img/tag.jpg">
+           	<div class="news-item-info">
+				<div class="tagName">${term}</div>
+				<div class="position">Count - ${count}</div>
+			</div>
+        </li>
+	</script>  
+	
+	<footer><p class='copyright'><a href = '#myModal' data-toggle="modal" >Credits &amp; CopyRight</a></p></footer>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content contentPart">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class='col-md-12'>
+			<p>All Rights Reserved &copy;<a href = 'https://angel.co/stacksearch' target='_blank'>StackSearch</a> </p>
+			<p><b>Project Development</b><br>Front-End  <br> <a href = 'http://www.linkedin.com/profile/view?id=82637656' target='_blank'>Shyam Ramachandran</a><br><br>Back-End  <br><a href = 'http://www.linkedin.com/profile/view?id=40421521' target='_blank'>Vineeth Mohan<a><br><a href = 'http://www.linkedin.com/profile/view?id=163153419' target='_blank'>Jalaluddeen</a></p>
+		</div>
+      </div>
+   
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</body>
+</html>

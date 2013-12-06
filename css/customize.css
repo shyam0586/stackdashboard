@@ -1,0 +1,137 @@
+body {
+  background: radial-gradient(ellipse farthest-side at 10% 0 , rgba(193, 179, 132, 0.87), rgba(184, 158, 111, 0.88), rgba(157, 134, 95, 0.88)) no-repeat scroll 0 0%, url("img/noise.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+  width:100%;
+  height:100%;
+  font-family:'Varela', sans-serif;
+}
+
+.topBar{
+	margin-top:20px; 
+	border-bottom:none;
+	margin-bottom:0px;
+	}
+
+.topHeader{padding-left:0px !important;margin-top:20px;}
+.topHeader div{padding-left:0px !important;}
+.topBar .navbar{margin-bottom:0px !important;}
+
+.searchBox{
+  -moz-box-sizing: content-box !important;
+  border: medium none !important;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3) !important;
+  color: #666666 !important;
+  transition: width 0.2s ease 0s;
+  width: 400px;
+  background:none repeat scroll 0 0 rgba(255, 255, 255, 0.4)!important;
+  border-radius:4px;
+  font-family:Varela;
+  font-size:14px;
+}
+
+.btn-custom {
+  background-color: #d7c7ab;
+  border-color: #d7c7ab;
+}
+
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom.active {
+  background-color: #cfbb9a;
+  border-color: #c7b088;
+}
+
+.btn-custom.disabled:hover,
+.btn-custom.disabled:focus,
+.btn-custom.disabled:active,
+.btn-custom.disabled.active,
+.btn-custom[disabled]:hover,
+.btn-custom[disabled]:focus,
+.btn-custom[disabled]:active,
+.btn-custom[disabled].active,
+fieldset[disabled] .btn-custom:hover,
+fieldset[disabled] .btn-custom:focus,
+fieldset[disabled] .btn-custom:active,
+fieldset[disabled] .btn-custom.active {
+  background-color: #d7c7ab;
+  border-color: #d7c7ab;
+}
+
+.searchBtn{	
+    border: medium none !important;
+    color: #FFFFFF;
+    height: 34px;
+    padding-left: 15px;
+    padding-right: 15px;
+	color:#666;
+	font-family:Varela;
+	font-size:14px;
+	}
+
+.modal-body p{text-align:center;}
+.tabContainer{padding-left:0px !important;padding-right:0px !important;}	
+.dashboardContainer{min-height:600px;}
+.dashboardContainer h2.dashboardHeader{font-family:'Varela', sans-serif; color:#fff; text-shadow: 0px -1px 0px #f1f1f1;}
+.rowMargin{margin-top:20px;}
+.trendGraphContainer{min-height:370px; padding:10px;  box-shadow:0 -1px 1px rgba(103, 103, 103, 0.4), 0 1px 1px rgba(103, 103, 103, 0.4); border-radius:2px;}
+.legendLabel{color:#f1f1f1 !important;}
+.compareGraphContainer{min-height:auto; padding:10px;  box-shadow:0 -1px 1px rgba(103, 103, 103, 0.4), 0 1px 1px rgba(103, 103, 103, 0.4); border-radius:2px; display:none;}
+.mapContainer p, .trendGraphContainer p{font-size:16px; font-family:'Varela',sans-serif;color:#FFF;}
+#maps{background:#c4bcab;}
+.widget-tabs{margin-bottom:10px!important;}
+.selectChange button{color:#666!important; height:32px;}
+
+.selectChange button:hover,.selectChange button:active,.selectChange button.active, .selectChange button:focus{
+	background-color:linear-gradient(to bottom, #FFFFFF 0%, #ffffff 100%)!important; 
+	color:#666 !important;
+	transition:none !important;
+	}
+
+.mainGraph , .userTab{margin-bottom:10px;}
+.mapContainer{background:rgba(51, 51, 51, 0.4); padding:10px;}
+
+.loading{
+	background:url('img/ajax-loader1.gif') no-repeat !important;
+	background-position:center center !important;
+}
+#placeholder{
+	width:100%;
+	height: 300px;
+}
+
+ #comparePlaceholder{
+	width:100%;
+	height: 300px;
+ }
+ 
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #ccc;
+  shape-rendering: crispEdges;
+}
+
+.tagName{
+	font-size:18px;
+}
+
+.area {
+  fill: #EAC85E;
+}
+.tab-pane{ height:336px; overflow-y:auto; overflow-x:hidden;}
+.userTab{padding-right:0px !important;}
+.upvoteList li,.news-list li{ 
+	-moz-box-sizing: content-box;
+	cursor: pointer;
+    height: 50px;
+    margin: 0 -12px;
+    padding: 12px;
+    transition: background-color 0.2s ease-out 0s;
+	}
+.news-item-info{margin-left:60px;}
+.upvoteList a,.news-list a{text-decoration:none; color:#f1f1f1;}
+
+footer{height:30px; padding:10px; background:rgba(51, 51, 51, 0.4);}
+footer a{text-decoration:none; color:#fff;}
+footer a:hover{text-decoration:none; color:#f1f1f1;}
+p.copyright{text-align:center; margin:0px !important;}
