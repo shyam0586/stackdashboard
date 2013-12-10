@@ -21,7 +21,10 @@
 		</div>
 	</div>
 	<div class='container dashboardContainer'>
-		<h2 class='dashboardHeader'>StackOverflow Tech Trends</h2>
+		<div class='row rowMargin'>
+			<h2 class='dashboardHeader'>StackOverflow Tech Trends</h2>
+			Read the <a href="http://blog.qbox.io/stackoverflow-tech-trends-demo" target="_blank">Blog Post</a> about how we constructed this demo
+		</div>
 		<div class='row rowMargin'>
 			<div class='col-md-8 col-sm-12 mainGraph' style='padding:10px; background-color:rgba(51, 51, 51, 0.4);'>
 				<div class='trendGraphContainer'>
@@ -222,5 +225,41 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
+    <script type="text/javascript">
+        var _kmq = _kmq || [];
+        var _kmk = _kmk || 'e7ddbc4f761acdadd2e2dffa9c18089dec1d22c5';
+        function _kms(u){
+          setTimeout(function(){
+            var d = document, f = d.getElementsByTagName('script')[0],
+            s = d.createElement('script');
+            s.type = 'text/javascript'; s.async = true; s.src = u;
+            f.parentNode.insertBefore(s, f);
+          }, 1);
+        }
+        _kms('//i.kissmetrics.com/i.js');
+        _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+    </script>
+
+    <!-- Start of Async HubSpot Analytics Code -->
+      <script type="text/javascript">
+        (function(d,s,i,r) {
+          if (d.getElementById(i)){return;}
+          var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+          n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/307608.js';
+          e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+      </script>
+    <!-- End of Async HubSpot Analytics Code -->
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-40292794-1', 'qbox.io');
+      ga('send', 'pageview');
+    </script>
+
 </body>
 </html>
